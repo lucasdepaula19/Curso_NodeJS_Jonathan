@@ -1,0 +1,44 @@
+{
+  "name": "sakila",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "ts-node .",
+    "test": "./node_modules/.bin/mocha -r ts-node/register --recursive test\\**\\*.ts",
+    "test-debug": "./node_modules/.bin/mocha --inspect-brk=9229 -r ts-node/register --recursive test\\**\\*.ts"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-connector-mysql": "^5.3.1",
+    "moment": "^2.24.0",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0",
+    "ts-node": "^8.0.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/supertest": "^2.0.7",
+    "chai": "^4.2.0",
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.4.2",
+    "typescript": "^3.3.3"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "sakila"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "post",
+  "plural": "posts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string"
+    },
+    "tags": {
+      "type": [
+        "string"
+      ]
+    },
+    "likes": {
+      "type": "number"
+    },
+    "deleted": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "comments": {
+      "type": "embedsMany",
+      "model": "comment",
+      "property": "comments"
+    },
+    "author": {
+      "type": "belongsTo",
+      "model": "author"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

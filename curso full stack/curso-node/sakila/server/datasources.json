@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "sakilaDS": {
+    "url": "mysql://root:1q2w3e4r@172.16.99.131/sakila",
+    "connector": "mysql",
+    "name": "sakilaDS"
+  }
+}

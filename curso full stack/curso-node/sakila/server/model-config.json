@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "sakilaDS"
+  },
+  "AccessToken": {
+    "dataSource": "sakilaDS",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "sakilaDS",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "sakilaDS",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "sakilaDS",
+    "public": false
+  },
+  "Film": {
+    "dataSource": "sakilaDS",
+    "public": true
+  },
+  "Language": {
+    "dataSource": "sakilaDS",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": "sakilaDS",
+    "public": true
+  },
+  "Inventory": {
+    "dataSource": "sakilaDS",
+    "public": true
+  },
+  "Rental": {
+    "dataSource": "sakilaDS",
+    "public": true
+  }
+}

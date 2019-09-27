@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "blogDS": {
+    "host": "",
+    "port": 0,
+    "url": "mongodb://blog-db/blog",
+    "database": "",
+    "password": "",
+    "name": "blogDS",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "postsPhotos": {
+    "name": "postsPhotos",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "/storage/posts-photos"
+  }
+}

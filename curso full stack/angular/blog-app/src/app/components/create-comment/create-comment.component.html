@@ -1,0 +1,17 @@
+<h2>
+  Comment this post
+</h2>
+
+<div class="form-group">
+  <label for="">Author</label>
+  <input name="author" [(ngModel)]="comment.author" type="text" class="form-control" placeholder="Your name">
+</div>
+
+<div class="form-group">
+  <label for="">Comment</label>
+  <input type="text" name="comment" [(ngModel)]="comment.comment" class="form-control" placeholder="Your comment">
+</div>
+
+<button (click)="save()" class="btn btn-primary">
+  Comment
+</button>

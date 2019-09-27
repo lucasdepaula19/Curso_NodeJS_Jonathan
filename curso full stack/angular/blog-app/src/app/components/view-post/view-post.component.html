@@ -1,0 +1,30 @@
+<h1>
+  {{post.title}}
+</h1>
+
+<h2>
+  Author: {{post.author.firstName}} {{post.author.lastName}}
+</h2>
+
+<img width="300" [src]="post.id | postPhotoUrl" alt="">
+
+<p>
+  {{post.text}}
+</p>
+
+<h5>
+  Likes: {{post.likes ? post.likes : 0}}
+</h5>
+
+<a (click)="like()" class="like-link">
+  Like
+</a>
+
+<view-comment *ngFor="let comment of post._comments" [comment]="comment"  >
+
+</view-comment>
+
+<create-comment (commentSaved)="commentSaved()" [postId]="post.id">
+
+</create-comment>
+

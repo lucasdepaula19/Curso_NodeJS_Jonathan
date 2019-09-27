@@ -1,0 +1,1 @@
+export const endpointApiAddress = "http://localhost:3000/api"

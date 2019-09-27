@@ -1,0 +1,13 @@
+<div class="create-comment">
+    <h3>
+        Your comment:
+    </h3>
+
+    <label for="">Your comment</label>
+    <input type="text" ng-model="$ctrl.comment.comment" placeholder="Write your comment" class="form-control">
+
+    <label for="">Your name</label>
+    <input type="text" ng-model="$ctrl.comment.author" placeholder="Write your name" class="form-control">
+
+    <button ng-click="$ctrl.sendComment()" class="btn btn-primary comment-button" >Comment</button>
+</div>

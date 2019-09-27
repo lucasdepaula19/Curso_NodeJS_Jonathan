@@ -1,0 +1,12 @@
+{
+    "filmId": 1,
+    "title": "ACADEMY DINOSAUR",
+    "replacementCost": 20.99,
+    "rating": "PG",
+    "language_id": 2,
+    "language": {
+        "languageId": 2,
+        "name": "Italian",
+        "lastUpdate": "2006-02-15T07:02:19.000Z"
+    }
+}

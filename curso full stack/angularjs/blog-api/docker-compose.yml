@@ -1,0 +1,23 @@
+version: '3'
+services:
+  blog-db:
+    image: mongo:4.0
+    volumes:
+      - blog-db-data:/data/db
+    ports:
+      - 27017:27017
+    container_name: blog-db
+  app:
+    build:
+      context: ./docker  
+    volumes:
+      - ./:/code
+      - blog-post-photos:/storage/posts-photos
+    command: npm start --prefix /code
+    container_name: blog-app
+    ports:
+      - "3000:3000"
+
+volumes:
+  blog-db-data:
+  blog-post-photos:

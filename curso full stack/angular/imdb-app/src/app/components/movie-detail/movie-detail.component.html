@@ -1,0 +1,35 @@
+<a [routerLink]="['/search']" class="btn">
+  Back
+</a>
+
+<h2>
+  {{movieDetail.Title}}
+</h2>
+
+<div class="row">
+  <div class="col-sm-6">
+    <img [src]="movieDetail.Poster" *ngIf="movieDetail.Poster != 'N/A'" alt="">
+
+    <img src="https://dubsism.files.wordpress.com/2017/12/image-not-found.png?w=547" *ngIf="movieDetail.Poster == 'N/A'" alt="">
+  </div>
+
+  <div class="col-sm-6">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>Director: </strong> {{movieDetail.Director}}
+      </li>
+      <li class="list-group-item">
+        <strong>Released: </strong> {{movieDetail.Released}}
+      </li>
+
+      <li class="list-group-item">
+        <strong>Ratings</strong>
+        
+        <p class="rating" *ngFor="let rating of movieDetail.Ratings" >
+            <strong>{{rating.Source}}</strong> {{rating.Value}}
+        </p>
+      </li>
+    </ul>
+  </div>
+
+</div>

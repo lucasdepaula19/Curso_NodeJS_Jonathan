@@ -1,0 +1,52 @@
+{
+    "name": "Film",
+    "plural": "Films",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "mysql": {
+            "table": "film"
+        }
+    },
+    "properties": {
+        "filmId": {
+            "type": "number",
+            "id": 1,
+            "mysql": {
+                "columnName": "film_id",
+                "dataType": "int"
+            }
+        },
+        "title": {
+            "type": "string",
+            "mysql": {
+                "columnName": "title",
+                "dataType": "varchar"
+            }
+        },
+        "replacementCost": {
+            "type": "number",
+            "mysql": {
+                "columnName": "replacement_cost",
+                "dataType": "decimal"
+            }
+        },
+        "rating": {
+            "type": "string",
+            "mysql": {
+                "columnName": "rating",
+                "dataType": "varchar"
+            }
+        }
+    },
+    "relations": {
+        "language": {
+            "type": "belongsTo",
+            "model": "Language",
+            "foreignKey": "language_id"
+        }
+    },
+    "acls": [
+       
+    ]
+}
